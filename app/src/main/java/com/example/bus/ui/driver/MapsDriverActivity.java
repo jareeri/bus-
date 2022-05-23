@@ -18,6 +18,7 @@ import androidx.core.content.ContextCompat;
 
 import com.example.bus.R;
 import com.example.bus.UserClient;
+import com.example.bus.model.Driver;
 import com.example.bus.model.User;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -364,7 +365,7 @@ public class MapsDriverActivity extends AppCompatActivity implements OnMapReadyC
                             .build();
                     db.setFirestoreSettings(settings);
 
-                    DocumentReference userRef = db.collection(getString(R.string.collection_users))
+                    DocumentReference userRef = db.collection(getString(R.string.collection_drivers))
                             .document(user.getUid());
 
                     userRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -372,8 +373,8 @@ public class MapsDriverActivity extends AppCompatActivity implements OnMapReadyC
                         public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                             if(task.isSuccessful()){
                                 Log.d(TAG, "onComplete: successfully set the user client.");
-                                User user = task.getResult().toObject(User.class);
-                                ((UserClient)(getApplicationContext())).setUser(user);
+                                Driver driver = task.getResult().toObject(Driver.class);
+                                ((UserClient)(getApplicationContext())).setDriver(driver);
                                 userRef.update("location", location);
 
 
