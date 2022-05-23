@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gg"
+    tools:context=".ui.activityc"
+    android:orientation="vertical">
+    <TextView
+        android:layout_marginStart="7dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Dear user, please choose one of the available means of transportation"
+        android:textSize="15dp"
+        android:textColor="@color/White"
+        android:textStyle="bold" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="wrap_content"
+        android:layout_height="315dp"
+        android:layout_gravity="center"
+        android:src="@drawable/van" />
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/van"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:background="@drawable/main"
+
+            android:onClick="van"
+            android:text="Van"
+            android:textColor="@color/White"
+            android:textStyle="bold"
+            tools:ignore="UsingOnClickInXml" />
+        <Button
+            android:layout_marginStart="10dp"
+            android:id="@+id/Bus"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:onClick="Bus"
+            android:background="@drawable/main"
+            android:text="Bus"
+            android:textColor="@color/White"
+            android:textStyle="bold"
+            tools:ignore="UsingOnClickInXml" />
+
+        <Button
+            android:layout_marginStart="10dp"
+            android:id="@+id/service"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:onClick="service"
+            android:background="@drawable/main"
+            android:text="Service"
+            android:textColor="@color/White"
+            android:textStyle="bold"
+            tools:ignore="UsingOnClickInXml" />
+
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:background="#8E5E73"
+        android:outlineAmbientShadowColor="@color/White"
+        android:outlineSpotShadowColor="@color/White"
+        app:itemRippleColor="@color/White"
+
+        app:menu="@menu/button_nnue" />
+
+
+</LinearLayout>

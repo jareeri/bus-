@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/gg"
+    android:orientation="vertical"
+    tools:context=".ui.activityb">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Choose whether you are a user or a driver"
+        android:textColor="@color/White"
+        android:textSize="17dp"
+        android:textStyle="bold" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="wrap_content"
+        android:layout_height="315dp"
+        android:layout_gravity="center"
+        android:src="@drawable/logo" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp">
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/main"
+
+            android:onClick="driver"
+            android:text="driver"
+            android:textColor="@color/White"
+            android:textStyle="bold"
+            tools:ignore="UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="50dp"
+            android:background="@drawable/main"
+            android:onClick="user"
+            android:text="user"
+            android:textColor="@color/White"
+            android:textStyle="bold"
+            tools:ignore="UsingOnClickInXml" />
+
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:background="#8E5E73"
+        android:outlineAmbientShadowColor="@color/White"
+        android:outlineSpotShadowColor="@color/White"
+        app:itemRippleColor="@color/White"
+
+        app:menu="@menu/button_nnue" />
+
+
+</LinearLayout>
